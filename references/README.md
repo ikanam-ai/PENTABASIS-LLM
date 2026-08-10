@@ -21,10 +21,6 @@
 - Schwartz, S. H. (1992). *Universals in the content and structure of values: Theoretical advances and empirical tests in 20 countries.* Advances in Experimental Social Psychology, 25, 1–65. [DOI](https://doi.org/10.1016/S0065-2601%2808%2960281-6)
 - Schwartz, S. H., Cieciuch, J., Vecchione, M., Davidov, E., Fischer, R., Beierlein, C., et al. (2012). *Refining the theory of basic individual values.* Journal of Personality and Social Psychology, 103(4), 663–688. [DOI](https://doi.org/10.1037/a0029393)
 
-## STONIC relationship
-
-STONIC contributes the layered L0–L3 measurement contract, same-item cross-interface analysis, order-aware choice protocol, scorer reporting, and self-specificity tests used in the PENTA-AI design. The precise manuscript and artifact citation will be added when the STONIC release is frozen.
-
 ## Source policy
 
 Construct definitions trace to primary publications and official instruments. Secondary sources support historical context and critique. Each future item records its theoretical source, authoring history, translation history, and review status.

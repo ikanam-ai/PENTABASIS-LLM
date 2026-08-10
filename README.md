@@ -33,7 +33,7 @@ This separation makes the gap between diagnosis and aspiration directly measurab
 
 ## Four evidence interfaces
 
-The study follows the layered measurement logic developed in STONIC:
+The study uses four aligned interfaces to capture complementary forms of worldview evidence:
 
 | Layer | Interface | Evidence object | Reportable claim |
 |---|---|---|---|
@@ -66,11 +66,11 @@ PENTA-AI v0.1 uses the ten paired facets as its primary operational codebook and
 
 ## Scientific positioning
 
-PENTA-AI joins three complementary traditions:
+PENTA-AI joins three complementary research traditions:
 
 - **Pentabasis** supplies a nested worldview architecture connecting individual, relational, civic, institutional, and country-level identity.
 - **GLOBE** supplies the descriptive–normative distinction, multilevel cultural measurement, and a model for large-scale comparative validation.
-- **STONIC** supplies interface-specific claims, aligned item banks, order-aware conflict measurement, cross-interface diagnostics, and scorer transparency.
+- **Measurement science and psychometrics** supply interface-specific claims, aligned item banks, order-aware choice protocols, cross-interface diagnostics, and transparent scorer validation.
 
 Schwartz values, GLOBE dimensions, Moral Foundations, and related spaces serve as external convergent and discriminant references. Crosswalks are estimated from data and expert annotation, then reported with uncertainty.
 
@@ -112,4 +112,3 @@ Suggested paper title:
 ## Citation
 
 Citation metadata will be frozen with the first public research release. Until then, cite the repository and the foundational sources listed in [`references/README.md`](references/README.md).
-
