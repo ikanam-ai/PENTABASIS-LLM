@@ -1,0 +1,136 @@
+project:
+  id: penta-ai
+  name: PENTA-AI
+  expansion: Pentabasis Evaluation of Normative Tendencies in Artificial Intelligence
+  construct_version: penta-ai-0.1
+  unit: model_package_under_declared_protocol
+  languages_planned:
+    - ru
+    - en
+
+lenses:
+  observed:
+    label: Observed / as is
+    definition: Representation of characteristic current practices, institutions, and social relations.
+  preferred:
+    label: Preferred / should be
+    definition: Representation of desirable practices, institutions, and social relations.
+
+levels:
+  - id: person
+    label_en: Person
+    label_ru: Человек
+    facets:
+      - id: creation
+        label_en: Creation
+        label_ru: Созидание
+      - id: development
+        label_en: Development
+        label_ru: Развитие
+    themes:
+      - agency
+      - learning
+      - productive_contribution
+      - self_realization
+      - personal_responsibility
+
+  - id: family
+    label_en: Family
+    label_ru: Семья
+    facets:
+      - id: love
+        label_en: Love
+        label_ru: Любовь
+      - id: trust
+        label_en: Trust
+        label_ru: Доверие
+    themes:
+      - care
+      - mutual_reliability
+      - intergenerational_continuity
+      - family_responsibility
+      - belonging
+
+  - id: society
+    label_en: Society
+    label_ru: Общество
+    facets:
+      - id: agreement
+        label_en: Agreement
+        label_ru: Согласие
+      - id: cooperation
+        label_en: Cooperation
+        label_ru: Сотрудничество
+    themes:
+      - civic_coordination
+      - reciprocity
+      - plural_interest_negotiation
+      - collective_action
+      - social_trust
+
+  - id: state
+    label_en: State
+    label_ru: Государство
+    facets:
+      - id: strength
+        label_en: Strength
+        label_ru: Сила
+      - id: responsibility
+        label_en: Responsibility
+        label_ru: Ответственность
+    themes:
+      - institutional_capacity
+      - public_accountability
+      - security_and_protection
+      - rule_implementation
+      - public_stewardship
+
+  - id: country
+    label_en: Country
+    label_ru: Страна
+    facets:
+      - id: unity
+        label_en: Unity
+        label_ru: Единство
+      - id: diversity
+        label_en: Diversity
+        label_ru: Многообразие
+    themes:
+      - civic_belonging
+      - cultural_plurality
+      - historical_continuity
+      - sovereignty
+      - collective_future
+
+interfaces:
+  l0:
+    label: Structured questionnaire
+    evidence: scalar_or_ordinal_response
+  l1:
+    label: Independent scenario endorsement
+    evidence: isolated_rating
+  l2:
+    label: Counterbalanced conflict choice
+    evidence: pairwise_priority
+  l3:
+    label: Free-text framing
+    evidence: scored_generation_with_evidence_spans
+
+provenance:
+  foundational_2022:
+    doi: 10.12737/2587-6295-2022-6-3-9-19
+    level_dominants:
+      person: creation
+      family: traditions
+      society: agreement
+      state: trust_in_institutions
+      country: patriotism
+  systematic_2024:
+    url: https://conflictology.ru/index.php/conflict/article/view/15250
+    paired_constants:
+      person: [creation, development]
+      family: [love, trust]
+      society: [agreement, cooperation]
+      state: [strength, responsibility]
+      country: [unity, diversity]
+

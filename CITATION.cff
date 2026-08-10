@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the repository release and the foundational Pentabasis sources."
+title: "PENTA-AI: Pentabasis Evaluation of Normative Tendencies in Artificial Intelligence"
+type: software
+authors:
+  - family-names: "Chetvergov"
+    given-names: "Andrey"
+repository-code: "https://github.com/ikanam-ai/PENTA-AI"
+version: "0.1.0-concept"
+date-released: "2026-08-10"
