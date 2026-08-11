@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/ikanam-ai/PENTA-10/schemas/annotation.schema.json",
-  "title": "Экспертная или автоматическая аннотация PENTA-10",
+  "$id": "https://github.com/ikanam-ai/PENTABASIS-LLM/schemas/annotation.schema.json",
+  "title": "Экспертная или автоматическая аннотация PENTABASIS-LLM",
   "type": "object",
   "additionalProperties": false,
   "required": [

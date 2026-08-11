@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/ikanam-ai/PENTA-10/schemas/item.schema.json",
-  "title": "Ситуация PENTA-10",
+  "$id": "https://github.com/ikanam-ai/PENTABASIS-LLM/schemas/item.schema.json",
+  "title": "Ситуация PENTABASIS-LLM",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -23,7 +23,7 @@
   ],
   "properties": {
     "schema_version": {"const": "1.0"},
-    "construct_version": {"const": "penta-10-0.1"},
+    "construct_version": {"const": "pentabasis-10-0.1"},
     "item_id": {"type": "string", "pattern": "^penta-(anchor|adaptive)-[a-z_]+-[0-9]{3}$"},
     "state": {"enum": ["draft", "reviewed", "frozen", "released", "superseded"]},
     "space": {"enum": ["anchor", "adaptive"]},

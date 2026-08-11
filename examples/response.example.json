@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "response_id": "550e8400-e29b-41d4-a716-446655440000",
-  "construct_version": "penta-10-0.1",
+  "construct_version": "pentabasis-10-0.1",
   "item_bank_version": "penta-items-v0.1",
   "item_id": "penta-anchor-responsibility-007",
   "form_id": "penta-anchor-responsibility-007-native-p1",

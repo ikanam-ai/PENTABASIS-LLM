@@ -4,9 +4,9 @@
 
 | Схема | Объект |
 |---|---|
-| [`construct.schema.json`](construct.schema.json) | онтология PENTA-10 |
+| [`construct.schema.json`](construct.schema.json) | онтология PENTABASIS-LLM |
 | [`source-registry.schema.json`](source-registry.schema.json) | библиографический и нормативный реестр |
-| [`crosswalk.schema.json`](crosswalk.schema.json) | карта нормативного источника к PENTA-10 |
+| [`crosswalk.schema.json`](crosswalk.schema.json) | карта нормативного источника к PENTABASIS-LLM |
 | [`item.schema.json`](item.schema.json) | каноническая ситуация и две формы протокола |
 | [`response.schema.json`](response.schema.json) | неизменяемый первичный ответ модели |
 | [`annotation.schema.json`](annotation.schema.json) | атомарная экспертная или автоматическая метка |

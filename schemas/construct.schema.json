@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/ikanam-ai/PENTA-10/schemas/construct.schema.json",
-  "title": "Онтология PENTA-10",
+  "$id": "https://github.com/ikanam-ai/PENTABASIS-LLM/schemas/construct.schema.json",
+  "title": "Онтология PENTABASIS-LLM",
   "type": "object",
   "required": ["schema_version", "project", "principles", "protocols", "levels", "aggregation", "provenance"],
   "properties": {
@@ -10,9 +10,9 @@
       "type": "object",
       "required": ["id", "construct_id", "construct_version", "language", "unit_of_analysis", "primary_claim"],
       "properties": {
-        "id": {"const": "penta-10"},
-        "construct_id": {"const": "penta-10"},
-        "construct_version": {"const": "penta-10-0.1"},
+        "id": {"const": "pentabasis-llm"},
+        "construct_id": {"const": "pentabasis-10"},
+        "construct_version": {"const": "pentabasis-10-0.1"},
         "language": {"const": "ru"},
         "unit_of_analysis": {"type": "string"},
         "primary_claim": {"type": "string", "minLength": 40}

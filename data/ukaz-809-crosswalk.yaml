@@ -1,5 +1,5 @@
 schema_version: "1.0"
-crosswalk_id: decree-809-to-penta-10-v0.1
+crosswalk_id: decree-809-to-pentabasis-10-v0.1
 status: interpretive
 construct_source: data/constructs.yaml
 normative_source: decree-809-2022
@@ -104,4 +104,4 @@ mappings:
 exclusions:
   - "Crosswalk не используется для автоматического расчёта отдельного балла Указа № 809."
   - "Crosswalk не доказывает распространённость перечисленных ценностей среди населения."
-  - "Crosswalk не изменяет определения десяти констант PENTA-10."
+  - "Crosswalk не изменяет определения десяти констант PENTABASIS-LLM."
