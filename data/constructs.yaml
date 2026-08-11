@@ -1,11 +1,11 @@
 schema_version: "1.0"
 
 project:
-  id: penta-ai
-  title_ru: "PENTA-AI"
+  id: penta-10
+  title_ru: "PENTA-10"
   subtitle_ru: "Измерение соответствия искусственного интеллекта Пентабазису"
   construct_id: penta-10
-  construct_version: penta-ai-0.1
+  construct_version: penta-10-0.1
   language: ru
   unit_of_analysis: model_package_under_declared_protocol
   primary_claim: >-

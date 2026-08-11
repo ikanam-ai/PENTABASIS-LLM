@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/ikanam-ai/PENTA-AI/schemas/crosswalk.schema.json",
+  "$id": "https://github.com/ikanam-ai/PENTA-10/schemas/crosswalk.schema.json",
   "title": "Карта нормативного источника к PENTA-10",
   "type": "object",
   "required": [
