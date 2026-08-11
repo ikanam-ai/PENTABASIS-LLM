@@ -1,0 +1,90 @@
+schema_version: "1.0"
+retrieved_at: "2026-08-11"
+
+sources:
+  - id: pentabasis-2022
+    role: construct_foundation
+    year: 2022
+    title_ru: "Восприятие базовых ценностей, факторов и структур социально-исторического развития России"
+    authors:
+      - "А. Д. Харичев"
+      - "А. Ю. Шутов"
+      - "А. В. Полосин"
+      - "Е. Н. Соколова"
+    doi: "10.12737/2587-6295-2022-6-3-9-19"
+    url: "https://naukaru.ru/ru/storage/download/105963"
+    supports:
+      - "пять уровней: человек, семья, общество, государство, страна"
+      - "исходные ценностные доминанты"
+    limitations:
+      - "качественное исследование на материалах групповых дискуссий"
+      - "не является шкалой для автоматической оценки ИИ"
+
+  - id: pentabasis-2024
+    role: construct_definition
+    year: 2024
+    title_ru: "Методология преподавания Пентабазиса в условиях современности"
+    authors:
+      - "Е. И. Наумова"
+      - "В. Г. Бондарев"
+    url: "https://conflictology.ru/index.php/conflict/article/view/15250"
+    supports:
+      - "десять парных цивилизационных констант"
+      - "взаимосвязь пяти уровней"
+
+  - id: pentabasis-system-2025
+    role: construct_clarification
+    year: 2025
+    title_ru: "Системная модель мировоззрения как основа российской идентичности"
+    authors:
+      - "Е. И. Наумова"
+      - "В. Г. Бондарев"
+    url: "https://conflictology.ru/index.php/conflict/article/view/15317"
+    supports:
+      - "системная интерпретация пяти уровней"
+      - "повторное закрепление десяти констант"
+
+  - id: decree-809-2022
+    role: normative_sidecar
+    year: 2022
+    title_ru: "Указ Президента Российской Федерации от 09.11.2022 № 809"
+    url: "https://www.kremlin.ru/acts/bank/48502/print"
+    supports:
+      - "официальный перечень традиционных российских духовно-нравственных ценностей"
+    limitations:
+      - "не определяет структуру PENTA-10"
+      - "не является эмпирическим исследованием ценностей населения"
+
+  - id: decree-136-2026
+    role: normative_amendment
+    year: 2026
+    title_ru: "Указ Президента Российской Федерации от 04.03.2026 № 136"
+    url: "https://www.kremlin.ru/acts/bank/53007/print"
+    amends: decree-809-2022
+
+  - id: gpv-2025
+    role: measurement_method
+    year: 2025
+    title_en: "Measuring Human and AI Values Based on Generative Psychometrics with Large Language Models"
+    url: "https://ojs.aaai.org/index.php/AAAI/article/view/34839"
+    supports:
+      - "атомизация свободного текста"
+      - "измерение динамически заданных ценностей"
+
+  - id: clave-2024
+    role: scorer_method
+    year: 2024
+    title_en: "CLAVE: An Adaptive Framework for Evaluating Values of LLM Generated Responses"
+    url: "https://arxiv.org/abs/2407.10725"
+    supports:
+      - "калибровка под произвольную систему ценностей"
+      - "concept pool и малый классификатор"
+
+  - id: adaem-2026
+    role: adaptive_item_method
+    year: 2026
+    title_en: "AdAEM: An Adaptively and Automated Extensible Measurement of LLMs' Value Difference"
+    url: "https://openreview.net/forum?id=qNlTH4kYJZ"
+    supports:
+      - "автоматическое расширение банка вопросов"
+      - "информационный отбор различающих ситуаций"

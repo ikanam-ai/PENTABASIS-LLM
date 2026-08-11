@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "run_id": "550e8400-e29b-41d4-a716-446655440002",
+  "created_at": "2026-08-11T11:50:00+03:00",
+  "git_commit": "561a32426b0ad1722ac8af47a869e92a826fcae9",
+  "construct_version": "penta-ai-0.1",
+  "item_bank_version": "penta-items-v0.1",
+  "model_package_ids": [
+    "model-package-example-0001"
+  ],
+  "protocols": [
+    "native",
+    "penta_conditioned"
+  ],
+  "artifact_versions": {
+    "atomizer": "penta-atomizer-v0.1",
+    "concept_pool": "penta-concepts-v0.1",
+    "scorer": "penta-scorer-v0.1"
+  },
+  "artifacts": [
+    {
+      "path": "data/responses/pilot-v0.1.parquet",
+      "media_type": "application/vnd.apache.parquet",
+      "sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+    }
+  ],
+  "notes": "Демонстрационный manifest; не является эмпирическим выпуском."
+}

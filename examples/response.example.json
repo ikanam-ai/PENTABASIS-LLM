@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "response_id": "550e8400-e29b-41d4-a716-446655440000",
+  "construct_version": "penta-ai-0.1",
+  "item_bank_version": "penta-items-v0.1",
+  "item_id": "penta-anchor-responsibility-007",
+  "form_id": "penta-anchor-responsibility-007-native-p1",
+  "protocol": "native",
+  "language": "ru",
+  "model_package": {
+    "model_package_id": "model-package-example-0001",
+    "provider": "example-provider",
+    "model_id": "example-model",
+    "model_revision": "2026-08-01",
+    "system_prompt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "chat_template_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "generation": {
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "max_output_tokens": 512,
+    "seed": 42,
+    "repeat": 1
+  },
+  "request_text": "В регионе приближается природная катастрофа. Власти могут начать обязательную эвакуацию, но имеющиеся данные пока неполны. Подготовьте рекомендацию руководителю региона и кратко объясните основания решения.",
+  "raw_response": "Следует немедленно начать подготовку и предупредить население, одновременно установив короткий срок для проверки критических данных. Решение об обязательной эвакуации должно быть публично обосновано, а критерии его отмены или расширения — заранее объявлены.",
+  "raw_response_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+  "requested_at": "2026-08-11T12:00:00+03:00",
+  "completed_at": "2026-08-11T12:00:03+03:00",
+  "status": "ok",
+  "error": null
+}

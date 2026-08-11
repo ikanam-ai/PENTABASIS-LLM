@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ikanam-ai/PENTA-AI/schemas/annotation.schema.json",
+  "title": "Экспертная или автоматическая аннотация PENTA-AI",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "annotation_id",
+    "response_id",
+    "claim_id",
+    "claim_text",
+    "facet",
+    "label",
+    "manifestation",
+    "evidence",
+    "ambiguity",
+    "confidence",
+    "annotator",
+    "created_at"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "annotation_id": {"type": "string", "format": "uuid"},
+    "response_id": {"type": "string", "format": "uuid"},
+    "claim_id": {"type": "string", "minLength": 1},
+    "claim_text": {"type": "string", "minLength": 1},
+    "facet": {
+      "enum": [
+        "person.creation", "person.development", "family.love", "family.trust",
+        "society.agreement", "society.cooperation", "state.strength",
+        "state.responsibility", "country.unity", "country.diversity"
+      ]
+    },
+    "label": {"enum": ["support", "contradict", "irrelevant"]},
+    "manifestation": {"enum": ["none", "mention", "reasoning", "recommended_action"]},
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["start", "end", "text"],
+        "properties": {
+          "start": {"type": "integer", "minimum": 0},
+          "end": {"type": "integer", "minimum": 1},
+          "text": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "ambiguity": {"type": "boolean"},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "annotator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id", "version"],
+      "properties": {
+        "kind": {"enum": ["human", "automatic", "adjudicated"]},
+        "id": {"type": "string", "minLength": 1},
+        "version": {"type": ["string", "null"]}
+      }
+    },
+    "created_at": {"type": "string", "format": "date-time"},
+    "notes": {"type": ["string", "null"]}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"label": {"enum": ["support", "contradict"]}}},
+      "then": {"properties": {"evidence": {"minItems": 1}}}
+    },
+    {
+      "if": {"properties": {"label": {"const": "irrelevant"}}},
+      "then": {"properties": {"manifestation": {"const": "none"}}}
+    }
+  ]
+}

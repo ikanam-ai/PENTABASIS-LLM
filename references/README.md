@@ -1,26 +1,112 @@
-# Sources and adjacent work
+# Источники PENTA-AI
 
-## Pentabasis foundations
+Реестр разделяет предмет измерения, нормативный контекст и вычислительные методы. Источник из одного слоя не подменяет источник другого слоя.
 
-- Kharichev, A. D., Shutov, A. Yu., Polosin, A. V., & Sokolova, E. N. (2022). *Perception of basic values, factors and structures of the socio-historical development of Russia (based on research and approbation materials).* Journal of Political Research, 6(3), 9–19. [DOI](https://doi.org/10.12737/2587-6295-2022-6-3-9-19) · [full record](https://naukaru.ru/ru/nauka/article/53483/view)
-- Naumova, E. I., & Bondarev, V. G. (2024). *Methodology of teaching Pentabasis in modern conditions.* Conflictology, 19(1). [article and PDF](https://conflictology.ru/index.php/conflict/article/view/15250)
-- Naumova, E. I., & Bondarev, V. G. (2024). *Systemic worldview model as a basis of Russian identity.* Conflictology. [article](https://conflictology.ru/index.php/conflict/article/view/15317)
+## 1. Пентабазис: предмет измерения
 
-## Comparative cultural measurement
+### Основание пяти уровней
 
-- House, R. J., Hanges, P. J., Javidan, M., Dorfman, P. W., & Gupta, V. (Eds.). (2004). *Culture, Leadership, and Organizations: The GLOBE Study of 62 Societies.* Sage.
-- GLOBE Project. *2004/2007 Studies: societal culture, values, practices, and leadership.* [official overview, instruments, and data](https://globeproject.com/study_2004_2007)
-- GLOBE Project. *Culture dimensions, definitions, and scale items.* [official instrument PDF](https://globeproject.com/data/GLOBE-Dimensions-Definitions-and-Scale-Items.pdf)
+А. Д. Харичев, А. Ю. Шутов, А. В. Полосин, Е. Н. Соколова. **«Восприятие базовых ценностей, факторов и структур социально-исторического развития России (по материалам исследований и апробации)»**. Журнал политических исследований, 2022, 6(3), 9–19.
 
-## AI cultural-value evaluation
+- [полный текст](https://naukaru.ru/ru/storage/download/105963)
+- [DOI](https://doi.org/10.12737/2587-6295-2022-6-3-9-19)
 
-- Karinshak, E., Hu, A., Kong, K., Rao, V., Wang, J., Wang, J., & Zeng, Y. (2024). *LLM-GLOBE: A Benchmark Evaluating the Cultural Values Embedded in LLM Output.* [paper](https://arxiv.org/abs/2411.06032) · [code](https://github.com/raovish6/LLM-GLOBE)
+Работа задаёт пять структур — человек, семья, общество, государство, страна — и исходные доминанты: созидание, традиции, согласие, доверие к институтам, патриотизм. Исследование носит качественный характер и само по себе не является измерительной шкалой для ИИ.
 
-## Individual human values
+### Десять парных констант
 
-- Schwartz, S. H. (1992). *Universals in the content and structure of values: Theoretical advances and empirical tests in 20 countries.* Advances in Experimental Social Psychology, 25, 1–65. [DOI](https://doi.org/10.1016/S0065-2601%2808%2960281-6)
-- Schwartz, S. H., Cieciuch, J., Vecchione, M., Davidov, E., Fischer, R., Beierlein, C., et al. (2012). *Refining the theory of basic individual values.* Journal of Personality and Social Psychology, 103(4), 663–688. [DOI](https://doi.org/10.1037/a0029393)
+Е. И. Наумова, В. Г. Бондарев. **«Методология преподавания Пентабазиса в условиях современности»**. Конфликтология, 2024, 19(1).
 
-## Source policy
+- [страница и полный текст](https://conflictology.ru/index.php/conflict/article/view/15250)
 
-Construct definitions trace to primary publications and official instruments. Secondary sources support historical context and critique. Each future item records its theoretical source, authoring history, translation history, and review status.
+Работа фиксирует пары: созидание и развитие; любовь и доверие; согласие и сотрудничество; сила и ответственность; единство многообразия.
+
+### Системная интерпретация
+
+Е. И. Наумова, В. Г. Бондарев. **«Системная модель мировоззрения как основа российской идентичности»**. Конфликтология, 2025, 20(3).
+
+- [страница и полный текст](https://conflictology.ru/index.php/conflict/article/view/15317)
+
+Работа раскрывает Пентабазис как взаимосвязанную систему уровней идентичности и повторно закрепляет десять констант.
+
+## 2. Нормативный контекст
+
+### Указ Президента Российской Федерации № 809
+
+**«Об утверждении Основ государственной политики по сохранению и укреплению традиционных российских духовно-нравственных ценностей»**, 9 ноября 2022 года.
+
+Это указ Президента Российской Федерации, не федеральный закон.
+
+- [официальный текст](https://www.kremlin.ru/acts/bank/48502/print)
+- [официальное опубликование](https://publication.pravo.gov.ru/Document/View/0001202211090019)
+
+Документ используется как нормативный sidecar: даёт официальный перечень ценностей и формулировки для контекстов, но не определяет PENTA-10 и не является исследованием мнений населения.
+
+### Изменение 2026 года
+
+Указ Президента Российской Федерации от 4 марта 2026 года № 136.
+
+- [официальный текст](https://www.kremlin.ru/acts/bank/53007/print)
+
+Версия нормативного корпуса всегда содержит основной акт и действующие изменения.
+
+## 3. Свободный текст и открытое пространство ценностей
+
+### Generative Psychometrics for Values
+
+Haoran Ye et al. **“Measuring Human and AI Values Based on Generative Psychometrics with Large Language Models.”** AAAI, 2025.
+
+- [статья AAAI](https://ojs.aaai.org/index.php/AAAI/article/view/34839)
+- [HTML-препринт](https://arxiv.org/html/2409.12106)
+- [код](https://github.com/Value4AI/gpv)
+
+Для PENTA-AI важны разбиение неструктурированного текста на ценностно значимые восприятия и возможность измерять динамически предоставленные ценности, а не только фиксированную психологическую шкалу.
+
+## 4. Калибровка под выбранные константы
+
+### CLAVE
+
+Jing Yao, Xiaoyuan Yi, Xing Xie. **“CLAVE: An Adaptive Framework for Evaluating Values of LLM Generated Responses.”** NeurIPS, 2024.
+
+- [статья](https://arxiv.org/html/2407.10725)
+- [страница Microsoft Research](https://www.microsoft.com/en-us/research/publication/clave-an-adaptive-framework-for-evaluating-values-of-llm-generated-responses/)
+
+CLAVE объединяет большую модель, извлекающую обобщённые ценностные концепты, и небольшой калибруемый классификатор. Метод поддерживает произвольные определения ценностей и показывает эффективность малых, но концептуально разнообразных размеченных наборов.
+
+## 5. Адаптивное построение вопросов
+
+### AdAEM
+
+Shitong Duan et al. **“AdAEM: An Adaptively and Automated Extensible Measurement of LLMs’ Value Difference.”** ICLR, 2026.
+
+- [статья](https://arxiv.org/html/2505.13531)
+- [OpenReview](https://openreview.net/forum?id=qNlTH4kYJZ)
+
+AdAEM автоматически расширяет тестовые вопросы и ищет ситуации, максимально выявляющие ценностные различия моделей. PENTA-AI добавляет к исходной цели абсолютную различимость поддержки и противоречия нормативному конструкту.
+
+## 6. Контекстуальные ценностные объекты
+
+### Value Kaleidoscope
+
+Taylor Sorensen et al. **“Value Kaleidoscope: Engaging AI with Pluralistic Human Values, Rights, and Duties.”** AAAI, 2024.
+
+- [статья](https://arxiv.org/abs/2309.00779)
+- [код](https://github.com/tsor13/kaleido)
+
+Работа подтверждает полезность явных контекстуальных ценностных объектов, доказательных объяснений, релевантности и направленности `support / oppose`. Она служит дополнительным baseline, но её онтология ценностей, прав и обязанностей не заменяет Пентабазис.
+
+## 7. Почему основной интерфейс — свободный ответ
+
+Mohsinul Kabir, Ajwad Abrar, Sophia Ananiadou. **“Break the Checkbox: Challenging Closed-Style Evaluations of Cultural Alignment in LLMs.”** EMNLP, 2025.
+
+- [статья](https://aclanthology.org/2025.emnlp-main.2/)
+
+Работа показывает нестабильность закрытых вариантов ответа, включая чувствительность к перестановке вариантов, и поддерживает использование менее ограниченных форматов.
+
+## Политика источников
+
+- определения конструкта восходят к первичным публикациям о Пентабазисе;
+- нормативные документы хранятся отдельным слоем;
+- методы измерения не используются как источник российских ценностей;
+- вторичные обзоры помогают навигации, но не заменяют первичное доказательство;
+- каждая версия данных фиксирует дату доступа и версию источника.

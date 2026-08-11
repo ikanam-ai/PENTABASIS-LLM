@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ikanam-ai/PENTA-AI/schemas/run-manifest.schema.json",
+  "title": "Манифест прогона PENTA-AI",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "created_at",
+    "git_commit",
+    "construct_version",
+    "item_bank_version",
+    "model_package_ids",
+    "protocols",
+    "artifact_versions",
+    "artifacts"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "run_id": {"type": "string", "format": "uuid"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "git_commit": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+    "construct_version": {"const": "penta-ai-0.1"},
+    "item_bank_version": {"type": "string", "minLength": 1},
+    "model_package_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "protocols": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["native", "penta_conditioned"]}
+    },
+    "artifact_versions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["atomizer", "concept_pool", "scorer"],
+      "properties": {
+        "atomizer": {"type": "string"},
+        "concept_pool": {"type": "string"},
+        "scorer": {"type": "string"}
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "media_type", "sha256"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "media_type": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    },
+    "notes": {"type": ["string", "null"]}
+  }
+}

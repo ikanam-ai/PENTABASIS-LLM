@@ -1,10 +1,20 @@
 cff-version: 1.2.0
-message: "Please cite the repository release and the foundational Pentabasis sources."
-title: "PENTA-AI: Pentabasis Evaluation of Normative Tendencies in Artificial Intelligence"
+message: "При цитировании укажите версию конструкта PENTA-AI и первичные источники Пентабазиса."
+title: "PENTA-AI: измерение соответствия искусственного интеллекта Пентабазису"
 type: software
 authors:
   - family-names: "Chetvergov"
     given-names: "Andrey"
 repository-code: "https://github.com/ikanam-ai/PENTA-AI"
 version: "0.1.0-concept"
-date-released: "2026-08-10"
+date-released: "2026-08-11"
+keywords:
+  - "Пентабазис"
+  - "ценности"
+  - "искусственный интеллект"
+  - "оценка языковых моделей"
+  - "нормативное соответствие"
+abstract: >-
+  PENTA-AI — русскоязычная научная концепция калиброванного измерения того,
+  насколько свободные ответы искусственного интеллекта поддерживают, применяют,
+  игнорируют или нарушают десять цивилизационных констант Пентабазиса.

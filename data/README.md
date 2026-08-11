@@ -1,60 +1,84 @@
-# Data design
+# Контракт данных PENTA-AI
 
-The empirical dataset will use immutable release directories and machine-readable manifests.
+Данные PENTA-AI разделены на первичные, экспертные и производные объекты. Первичные ответы никогда не перезаписываются после получения.
 
-## Planned layout
+## Пространства имён
 
 ```text
 data/
-  constructs.yaml
-  item_bank/
-    items.jsonl
-    codebook.yaml
-    translations.jsonl
-  protocols/
-    prompts.jsonl
-    model_packages.jsonl
-  responses/
-    l0/
-    l1/
-    l2/
-    l3/
-  annotations/
-    human/
-    automatic/
-  derived/
-    profiles/
-    transfer/
-    validity/
-  manifests/
+├── constructs.yaml                 онтология PENTA-10
+├── sources.yaml                    реестр источников
+├── ukaz-809-crosswalk.yaml         отдельная нормативная карта
+├── item-bank/                      канонические ситуации и формы
+├── responses/                      необработанные ответы моделей
+├── annotations/                    экспертные и автоматические метки
+├── concepts/                       concept pool оценщика
+├── profiles/                       агрегированные профили
+└── manifests/                      версии, хеши и протоколы
 ```
 
-Large empirical objects will live in a versioned research-data release. Git will contain schemas, compact codebooks, manifests, checksums, and sample records.
+Крупные эмпирические объекты могут храниться вне Git, но каждый выпуск содержит схемы, manifest, контрольные суммы и компактные примеры.
 
-## Required provenance
+Формальные контракты всех объектов собраны в [`../schemas/`](../schemas/README.md): онтология, источники, crosswalk, ситуация, ответ, аннотация и manifest прогона.
 
-Every response record will identify:
+## Стабильные идентификаторы
 
-- dataset and item-bank version
-- construct version
-- scenario and interface form
-- observed or preferred lens
-- language and translation provenance
-- model provider, model ID, and revision where available
-- system prompt and chat template
-- decoding parameters and random seed where supported
-- request and response timestamps
-- parser and scorer versions
-- raw-output checksum
+| Объект | Формат |
+|---|---|
+| Конструкт | `penta-ai-0.1` |
+| Константа | `level.facet`, например `state.responsibility` |
+| Ситуация | `penta-{space}-{facet}-{number}` |
+| Форма | `{item_id}-{protocol}-p{paraphrase}` |
+| Модельный пакет | хеш нормализованного описания пакета |
+| Ответ | UUID + SHA-256 необработанного текста |
+| Аннотация | UUID, связанный с ответом и константой |
 
-## Identity fields
+## Состояния объекта
 
-The stable analytical identity is `model_package_id`, representing the combined model, system prompt, template, decoding policy, language, and interface. A separate `base_model_id` enables family-level summaries.
+```text
+draft → reviewed → frozen → released → superseded
+```
 
-## Release states
+- `draft` допускает редактирование;
+- `reviewed` прошёл предметную проверку;
+- `frozen` неизменяем внутри выпуска;
+- `released` опубликован с manifest и контрольной суммой;
+- `superseded` сохранён, но заменён новой версией.
 
-1. `draft` — item writing and internal review
-2. `pilot` — empirical quality assessment
-3. `candidate` — frozen payload under validation
-4. `release` — checksummed, documented, and citable
+## Первичная запись ответа
 
+Ответ содержит:
+
+- версию конструкта и банка;
+- идентификатор ситуации и формы;
+- режим `native` или `penta_conditioned`;
+- полный модельный пакет;
+- исходный запрос и исходный ответ;
+- параметры и время генерации;
+- статус запроса;
+- SHA-256 текста.
+
+Схема: [`../schemas/response.schema.json`](../schemas/response.schema.json). Пример: [`../examples/response.example.json`](../examples/response.example.json).
+
+## Аннотация
+
+Аннотация связывает атомарное утверждение с одной константой и обязательно сохраняет доказательный фрагмент для поддержки или противоречия.
+
+Схема: [`../schemas/annotation.schema.json`](../schemas/annotation.schema.json). Пример: [`../examples/annotation.example.json`](../examples/annotation.example.json).
+
+## Неизменяемость и производность
+
+Каждый производный объект указывает:
+
+- хеш исходного ответа;
+- версию атомизатора;
+- версию concept pool;
+- версию оценщика;
+- время расчёта;
+- commit кода.
+
+Повторная оценка создаёт новую запись. Старый результат остаётся доступным для воспроизведения опубликованного профиля.
+
+## Персональные данные
+
+PENTA-AI не собирает массовые ответы людей. Идентификаторы экспертов псевдонимизируются; таблица соответствия хранится отдельно от исследовательских записей и не входит в публичный выпуск.

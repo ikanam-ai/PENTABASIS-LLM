@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ikanam-ai/PENTA-AI/schemas/response.schema.json",
+  "title": "Первичный ответ модели PENTA-AI",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "response_id",
+    "construct_version",
+    "item_bank_version",
+    "item_id",
+    "form_id",
+    "protocol",
+    "language",
+    "model_package",
+    "generation",
+    "request_text",
+    "raw_response",
+    "raw_response_sha256",
+    "requested_at",
+    "completed_at",
+    "status"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "response_id": {"type": "string", "format": "uuid"},
+    "construct_version": {"const": "penta-ai-0.1"},
+    "item_bank_version": {"type": "string", "minLength": 1},
+    "item_id": {"type": "string"},
+    "form_id": {"type": "string"},
+    "protocol": {"enum": ["native", "penta_conditioned"]},
+    "language": {"const": "ru"},
+    "model_package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_package_id", "provider", "model_id", "model_revision", "system_prompt_sha256", "chat_template_sha256"],
+      "properties": {
+        "model_package_id": {"type": "string", "minLength": 16},
+        "provider": {"type": "string", "minLength": 1},
+        "model_id": {"type": "string", "minLength": 1},
+        "model_revision": {"type": ["string", "null"]},
+        "system_prompt_sha256": {"$ref": "#/$defs/sha256"},
+        "chat_template_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "generation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["temperature", "top_p", "max_output_tokens", "seed", "repeat"],
+      "properties": {
+        "temperature": {"type": ["number", "null"], "minimum": 0},
+        "top_p": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "max_output_tokens": {"type": "integer", "minimum": 1},
+        "seed": {"type": ["integer", "null"]},
+        "repeat": {"type": "integer", "minimum": 1}
+      }
+    },
+    "request_text": {"type": "string", "minLength": 1},
+    "raw_response": {"type": "string"},
+    "raw_response_sha256": {"$ref": "#/$defs/sha256"},
+    "requested_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": ["string", "null"], "format": "date-time"},
+    "status": {"enum": ["ok", "refusal", "empty", "timeout", "provider_error", "parse_error"]},
+    "error": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

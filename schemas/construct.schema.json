@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ikanam-ai/PENTA-AI/schemas/construct.schema.json",
+  "title": "Онтология PENTA-10",
+  "type": "object",
+  "required": ["schema_version", "project", "principles", "protocols", "levels", "aggregation", "provenance"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "project": {
+      "type": "object",
+      "required": ["id", "construct_id", "construct_version", "language", "unit_of_analysis", "primary_claim"],
+      "properties": {
+        "id": {"const": "penta-ai"},
+        "construct_id": {"const": "penta-10"},
+        "construct_version": {"const": "penta-ai-0.1"},
+        "language": {"const": "ru"},
+        "unit_of_analysis": {"type": "string"},
+        "primary_claim": {"type": "string", "minLength": 40}
+      }
+    },
+    "principles": {"type": "object"},
+    "protocols": {
+      "type": "object",
+      "required": ["native", "penta_conditioned"]
+    },
+    "levels": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["id", "label_ru", "description_ru", "facets"],
+        "properties": {
+          "id": {"enum": ["person", "family", "society", "state", "country"]},
+          "label_ru": {"type": "string"},
+          "description_ru": {"type": "string"},
+          "facets": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "required": ["id", "label_ru", "definition_ru", "includes", "contradicts", "boundary_notes"],
+              "properties": {
+                "id": {"type": "string"},
+                "label_ru": {"type": "string"},
+                "definition_ru": {"type": "string", "minLength": 30},
+                "includes": {"type": "array", "minItems": 3, "items": {"type": "string"}},
+                "contradicts": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+                "boundary_notes": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+              }
+            }
+          }
+        }
+      }
+    },
+    "aggregation": {"type": "object"},
+    "provenance": {"type": "object"}
+  }
+}

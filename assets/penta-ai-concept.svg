@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">PENTA-AI — карта Пентабазиса для искусственного интеллекта</title>
+  <desc id="desc">Пять вложенных уровней: человек, семья, общество, государство и страна; десять цивилизационных констант Пентабазиса.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08142f"/>
+      <stop offset="0.52" stop-color="#102454"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="35%" cy="50%" r="56%">
+      <stop offset="0" stop-color="#60a5fa" stop-opacity=".20"/>
+      <stop offset=".55" stop-color="#8b5cf6" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset=".5" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020617" flood-opacity=".46"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="630" rx="28" fill="url(#halo)"/>
+
+  <g opacity=".13" stroke="#bfdbfe" fill="none">
+    <path d="M0 96H1200M0 192H1200M0 288H1200M0 384H1200M0 480H1200M0 576H1200"/>
+    <path d="M96 0V630M192 0V630M288 0V630M384 0V630M480 0V630M576 0V630M672 0V630M768 0V630M864 0V630M960 0V630M1056 0V630M1152 0V630"/>
+  </g>
+
+  <g transform="translate(315 318)" filter="url(#shadow)" stroke-linejoin="round">
+    <polygon points="0,-260 247,-80 153,210 -153,210 -247,-80" fill="#2563eb" fill-opacity=".17" stroke="#60a5fa" stroke-width="2.4"/>
+    <polygon points="0,-216 205,-67 127,175 -127,175 -205,-67" fill="#7c3aed" fill-opacity=".22" stroke="#a78bfa" stroke-width="2.4"/>
+    <polygon points="0,-172 164,-53 101,139 -101,139 -164,-53" fill="#0f766e" fill-opacity=".30" stroke="#2dd4bf" stroke-width="2.4"/>
+    <polygon points="0,-128 122,-40 75,104 -75,104 -122,-40" fill="#d97706" fill-opacity=".32" stroke="#fbbf24" stroke-width="2.4"/>
+    <polygon points="0,-82 78,-25 48,66 -48,66 -78,-25" fill="#e2e8f0" fill-opacity=".96" stroke="#fff" stroke-width="2.4" filter="url(#glow)"/>
+
+    <circle cx="0" cy="-238" r="5" fill="#60a5fa"/>
+    <circle cx="225" cy="-73" r="5" fill="#a78bfa"/>
+    <circle cx="139" cy="191" r="5" fill="#2dd4bf"/>
+    <circle cx="-139" cy="191" r="5" fill="#fbbf24"/>
+    <circle cx="-225" cy="-73" r="5" fill="#f8fafc"/>
+
+    <g text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+      <text y="-226" fill="#dbeafe" font-size="17" font-weight="700" letter-spacing="1.2">СТРАНА</text>
+      <text x="172" y="-51" fill="#ede9fe" font-size="16" font-weight="700" transform="rotate(18 172 -51)">ГОСУДАРСТВО</text>
+      <text x="104" y="164" fill="#ccfbf1" font-size="17" font-weight="700">ОБЩЕСТВО</text>
+      <text x="-104" y="164" fill="#fef3c7" font-size="17" font-weight="700">СЕМЬЯ</text>
+      <text y="-5" fill="#0f172a" font-size="17" font-weight="800">ЧЕЛОВЕК</text>
+      <text y="18" fill="#334155" font-size="10" font-weight="700" letter-spacing="1">СУБЪЕКТ</text>
+    </g>
+  </g>
+
+  <g transform="translate(635 92)" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text fill="#f8fafc" font-size="68" font-weight="800" letter-spacing="-2">PENTA-AI</text>
+    <rect y="90" width="455" height="5" rx="2.5" fill="url(#accent)"/>
+    <text y="135" fill="#bfdbfe" font-size="24" font-weight="600">Пентабазис как измеримый</text>
+    <text y="167" fill="#bfdbfe" font-size="24" font-weight="600">нормативный профиль ИИ</text>
+
+    <g transform="translate(0 215)">
+      <g>
+        <circle cx="8" cy="3" r="6" fill="#38bdf8"/>
+        <text x="28" y="10" fill="#e0f2fe" font-size="19" font-weight="650">Созидание · Развитие</text>
+      </g>
+      <g transform="translate(0 48)">
+        <circle cx="8" cy="3" r="6" fill="#fbbf24"/>
+        <text x="28" y="10" fill="#fef3c7" font-size="19" font-weight="650">Любовь · Доверие</text>
+      </g>
+      <g transform="translate(0 96)">
+        <circle cx="8" cy="3" r="6" fill="#2dd4bf"/>
+        <text x="28" y="10" fill="#ccfbf1" font-size="19" font-weight="650">Согласие · Сотрудничество</text>
+      </g>
+      <g transform="translate(0 144)">
+        <circle cx="8" cy="3" r="6" fill="#a78bfa"/>
+        <text x="28" y="10" fill="#ede9fe" font-size="19" font-weight="650">Сила · Ответственность</text>
+      </g>
+      <g transform="translate(0 192)">
+        <circle cx="8" cy="3" r="6" fill="#60a5fa"/>
+        <text x="28" y="10" fill="#dbeafe" font-size="19" font-weight="650">Единство · Многообразие</text>
+      </g>
+    </g>
+
+    <g transform="translate(0 488)">
+      <rect width="452" height="58" rx="14" fill="#0f172a" fill-opacity=".52" stroke="#60a5fa" stroke-opacity=".32"/>
+      <text x="22" y="24" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="1.5">НАУЧНЫЙ КОНЦЕПТ</text>
+      <text x="22" y="44" fill="#f8fafc" font-size="15" font-weight="600">Свободные ответы · доказательные фрагменты · калибровка</text>
+    </g>
+  </g>
+</svg>

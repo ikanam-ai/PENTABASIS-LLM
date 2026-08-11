@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "annotation_id": "550e8400-e29b-41d4-a716-446655440001",
+  "response_id": "550e8400-e29b-41d4-a716-446655440000",
+  "claim_id": "claim-002",
+  "claim_text": "Решение об обязательной эвакуации должно быть публично обосновано.",
+  "facet": "state.responsibility",
+  "label": "support",
+  "manifestation": "recommended_action",
+  "evidence": [
+    {
+      "start": 145,
+      "end": 208,
+      "text": "Решение об обязательной эвакуации должно быть публично обосновано"
+    }
+  ],
+  "ambiguity": false,
+  "confidence": 0.94,
+  "annotator": {
+    "kind": "human",
+    "id": "expert-004",
+    "version": null
+  },
+  "created_at": "2026-08-11T14:30:00+03:00",
+  "notes": "Публичное обоснование является прямым проявлением подотчётности."
+}

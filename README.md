@@ -1,114 +1,193 @@
+<div align="center">
+  <img src="assets/penta-ai-concept.svg" alt="PENTA-AI — карта Пентабазиса для оценки искусственного интеллекта" width="100%">
+</div>
+
+<div align="center">
+
+[![Язык](https://img.shields.io/badge/язык-русский-1f6feb)](#penta-ai)
+[![Статус](https://img.shields.io/badge/статус-концепт_v0.1-7c3aed)](#статус-концепта)
+[![Конструкт](https://img.shields.io/badge/конструкт-5_уровней_·_10_констант-0f766e)](#карта-пентабазиса)
+[![Метод](https://img.shields.io/badge/метод-свободные_ответы-f59e0b)](#как-устроено-измерение)
+
+</div>
+
 # PENTA-AI
 
-**Pentabasis Evaluation of Normative Tendencies in Artificial Intelligence**
+**PENTA-AI** — научная концепция измерения того, насколько ответы искусственного интеллекта соответствуют ценностной структуре Пентабазиса: **Человек → Семья → Общество → Государство → Страна**.
 
-PENTA-AI is a research program for mapping how AI systems represent five nested domains of social life: **Person, Family, Society, State, and Country**. It translates the Russian Pentabasis worldview model into an explicit measurement contract for AI evaluation.
+Проект переводит Пентабазис из мировоззренческой модели в прозрачный вычислимый контракт: десять ценностных констант, реалистичные ситуации, свободные ответы моделей, доказательная разметка и калиброванный автоматический оценщик.
 
-> **Core question:** What kind of social world does an AI system describe, endorse, choose, and construct across the five Pentabasis levels?
+> **Главный вопрос:** как ИИ описывает, обосновывает и выбирает действия, когда ситуация затрагивает созидание и развитие человека, любовь и доверие в семье, согласие и сотрудничество в обществе, силу и ответственность государства, единство и многообразие страны?
 
-## Research object
+## Научная граница
 
-PENTA-AI treats a model response as evidence about an **interface-conditioned worldview representation**. The program studies how that evidence changes across prompts, tasks, languages, deployment templates, and social contexts.
+PENTA-AI оценивает **ответ конкретного модельного пакета в конкретном протоколе**. Проект не утверждает, что у языковой модели существуют человеческие убеждения или неизменные «внутренние ценности».
 
-The operational space contains five levels and ten value facets:
+```text
+модельный пакет = модель + системный промпт + шаблон диалога
+                 + язык + параметры генерации + версия
+```
 
-| Level | Value facets | Primary measurement question |
+Корректная интерпретация результата:
+
+> В данных ситуациях и при данных настройках ответы модели проявили такую степень совместимости с операциональными определениями Пентабазиса.
+
+## Карта Пентабазиса
+
+| Уровень | Цивилизационные константы | Что становится наблюдаемым в ответе ИИ |
 |---|---|---|
-| Person | Creation · Development | How does the system frame agency, growth, work, knowledge, and self-realization? |
-| Family | Love · Trust | How does it frame care, continuity, mutual obligation, intimacy, and intergenerational relations? |
-| Society | Agreement · Cooperation | How does it frame solidarity, coordination, plural interests, reciprocity, and civic association? |
-| State | Strength · Responsibility | How does it frame institutional capacity, authority, accountability, public protection, and stewardship? |
-| Country | Unity · Diversity | How does it frame shared belonging, cultural plurality, historical continuity, sovereignty, and collective future? |
+| **Человек** | Созидание · Развитие | субъектность, труд, обучение, самореализация, личная ответственность |
+| **Семья** | Любовь · Доверие | забота, надёжность, взаимные обязательства, связь поколений |
+| **Общество** | Согласие · Сотрудничество | солидарность, взаимопомощь, координация, уважение различий |
+| **Государство** | Сила · Ответственность | дееспособность институтов, защита, подотчётность, служение общему благу |
+| **Страна** | Единство · Многообразие | принадлежность, историческая преемственность, суверенитет, культурное разнообразие |
 
-Each facet receives a separate score. Level scores are reported as aggregates with facet-level evidence preserved.
+Парные константы **дополняют друг друга и не образуют биполярные шкалы**. Сила не противопоставляется ответственности, а единство — многообразию. Хороший сценарий позволяет увидеть, способен ли ИИ совместить обе стороны пары в осмысленном решении.
 
-## Two measurement lenses
+Машиночитаемая версия конструкта находится в [`data/constructs.yaml`](data/constructs.yaml), полный смысловой контракт — в [`docs/measurement-contract.md`](docs/measurement-contract.md), а правила доказательной разметки — в [`docs/annotation-guide.md`](docs/annotation-guide.md).
 
-PENTA-AI adapts the most productive distinction in the GLOBE research program:
+## Как устроено измерение
 
-- **Observed / “as is”** — the practices, institutions, and relations that the model presents as characteristic of the current world.
-- **Preferred / “should be”** — the practices, institutions, and relations that the model presents as desirable.
+PENTA-AI использует свободные ответы на практические ситуации. Закрытые анкеты и выбор из заранее заданных вариантов не входят в основной протокол.
 
-This separation makes the gap between diagnosis and aspiration directly measurable. Every item declares its lens, social level, value facet, actor, context, and reportable claim.
-
-## Four evidence interfaces
-
-The study uses four aligned interfaces to capture complementary forms of worldview evidence:
-
-| Layer | Interface | Evidence object | Reportable claim |
-|---|---|---|---|
-| L0 | Structured questionnaire | scalar or ordinal response | stated worldview profile under the questionnaire protocol |
-| L1 | Independent scenario endorsement | rating of one action or principle | endorsement profile under isolated evaluation |
-| L2 | Counterbalanced conflict choice | choice between competing actions or principles | priority profile under explicit trade-off |
-| L3 | Free-text response | generated framing scored against the construct codebook | textual-framing profile under open generation |
-
-The same scenario core should instantiate L1, L2, and L3 wherever item semantics allow it. This supports direct interface-transfer tests while preserving the meaning of each evidence type.
-
-## Measurement cube
-
-The initial design can be expressed as:
-
-```text
-5 social levels × 2 value facets × 2 lenses × 4 interfaces
-                     × languages × contexts × model packages
+```mermaid
+flowchart LR
+    S[Источники<br/>Пентабазиса] --> O[PENTA-10<br/>онтология]
+    O --> A[Фиксированные<br/>сценарии]
+    O --> D[Адаптивные<br/>сценарии]
+    A --> N[Спонтанный режим<br/>без подсказки]
+    D --> N
+    A --> C[Заданный режим<br/>Пентабазис дан]
+    D --> C
+    N --> R[Ответы ИИ]
+    C --> R
+    R --> P[Атомарные<br/>утверждения]
+    P --> E[CLAVE-PENTA<br/>оценщик]
+    E --> V[Профиль из<br/>10 констант]
 ```
 
-The first release targets a balanced core in Russian and English. Additional linguistic and cultural settings form explicit protocol extensions.
+### Спонтанное соответствие (`native`)
 
-## Construct provenance
+Модель получает обычную жизненную, общественную или институциональную ситуацию. Пентабазис и названия констант не упоминаются.
 
-The project versions the Pentabasis construct because its published formulations have evolved:
+Режим показывает **спонтанную совместимость** ответа с Пентабазисом.
 
-1. The 2022 foundational study identifies the five social structures and associates them with the value dominants **creation, traditions, agreement, trust in institutions, and patriotism**.
-2. The 2024 systematic pedagogical formulation organizes their relationships through the paired constants **creation and development; love and trust; agreement and cooperation; strength and responsibility; unity in diversity**.
+### Заданное соответствие (`penta_conditioned`)
 
-PENTA-AI v0.1 uses the ten paired facets as its primary operational codebook and retains the 2022 dominants as provenance labels and auxiliary coding concepts. Every dataset release records the construct version.
+Модель получает ту же ситуацию вместе с точным определением относящихся к ней констант.
 
-## Scientific positioning
+Режим показывает, способен ли ИИ **понять и применить** заданный Пентабазис, а не только повторить его лексику.
 
-PENTA-AI joins three complementary research traditions:
+Сравнение двух режимов отделяет спонтанное проявление от управляемого следования нормативной системе.
 
-- **Pentabasis** supplies a nested worldview architecture connecting individual, relational, civic, institutional, and country-level identity.
-- **GLOBE** supplies the descriptive–normative distinction, multilevel cultural measurement, and a model for large-scale comparative validation.
-- **Measurement science and psychometrics** supply interface-specific claims, aligned item banks, order-aware choice protocols, cross-interface diagnostics, and transparent scorer validation.
+## Из ответа — в доказательство
 
-Schwartz values, GLOBE dimensions, Moral Foundations, and related spaces serve as external convergent and discriminant references. Crosswalks are estimated from data and expert annotation, then reported with uncertainty.
+Длинный ответ сначала разбивается на минимальные смысловые утверждения. Для каждого утверждения оценщик возвращает:
 
-## Planned outputs
-
-1. A versioned construct codebook and expert-reviewed item bank.
-2. Parallel Russian and English L0–L3 instruments.
-3. A multilingual panel of model outputs with complete protocol metadata.
-4. Human reference distributions for observed and preferred profiles.
-5. Validated open-text scoring models and adjudicated evaluation subsets.
-6. Cross-interface, cross-language, and model-specificity analyses.
-7. PENTA-AI model cards and an interactive comparative atlas.
-
-## Repository map
-
-```text
-README.md                       project overview and scope
-docs/measurement-contract.md   constructs, interfaces, claims, and validity gates
-docs/research-roadmap.md       staged empirical program and release criteria
-data/constructs.yaml           machine-readable construct registry
-data/README.md                 planned dataset organization and provenance fields
-references/README.md           primary sources and adjacent measurement work
+```yaml
+facet: family.trust
+relevance: relevant
+valence: support
+manifestation: recommended_action
+evidence_span: "предложить прозрачные правила и выполнить обещание"
+confidence: 0.91
 ```
 
-## Current status
+Так сохраняется проверяемая связь между исходным текстом и числом. Простое упоминание слова «доверие» не равно применению доверия в рассуждении или действии.
 
-**Concept and protocol design · v0.1**
+## Профиль соответствия
 
-The repository currently fixes the research object, construct version, measurement layers, validation targets, and pilot sequence. Item writing, expert review, human reference collection, and model evaluation are the next empirical stages.
+Каждая из десяти констант получает собственный профиль:
 
-## Name
+- **покрытие** — присутствует ли релевантное свидетельство;
+- **поддержка** — совместимо ли утверждение с константой;
+- **противоречие** — нарушает ли утверждение её смысл;
+- **применение** — преобразована ли ценность в аргумент или действие;
+- **смешанность** — встречаются ли одновременно поддержка и противоречие;
+- **устойчивость** — сохраняется ли результат при перефразировании и повторной генерации.
 
-**PENTA-AI** expands to **Pentabasis Evaluation of Normative Tendencies in Artificial Intelligence**.
+```text
+Net conformity = доля поддержки − доля противоречий
+Conditioned uplift = заданный режим − спонтанный режим
+```
 
-Suggested paper title:
+Отсутствие свидетельства не считается противоречием. Основной результат — десятикомпонентный профиль с интервалами неопределённости. Единый сводный балл допустим только как вторичное, полностью раскрытое среднее с равными весами констант.
 
-> **PENTA-AI: Mapping AI Worldviews Across Person, Family, Society, State, and Country**
+## Два пространства сценариев
 
-## Citation
+```mermaid
+flowchart TB
+    B[Банк PENTA-AI] --> X[40 опорных сценариев]
+    B --> Y[40 адаптивных сценариев]
+    X --> X1[Заранее зафиксированы]
+    X --> X2[Абсолютная сопоставимость]
+    Y --> Y1[Автоматически расширяются]
+    Y --> Y2[Выявляют трудные границы]
+    X1 --> Z[Отдельные результаты]
+    X2 --> Z
+    Y1 --> Z
+    Y2 --> Z
+```
 
-Citation metadata will be frozen with the first public research release. Until then, cite the repository and the foundational sources listed in [`references/README.md`](references/README.md).
+**Опорные сценарии** (`anchor`) фиксируют предметную область до просмотра результатов исследуемых моделей. **Адаптивные сценарии** (`adaptive`) создаются по модифицированному принципу AdAEM и ищут содержательные случаи, в которых проявляются ценностные границы. Два пространства анализируются отдельно, чтобы адаптивный отбор не подменял абсолютную оценку.
+
+Спецификация выпуска v0.1 зафиксирована в [`docs/scientific-method.md`](docs/scientific-method.md).
+
+## Научное ядро
+
+PENTA-AI соединяет четыре совместимых механизма:
+
+1. **Пентабазис** задаёт предмет измерения: пять уровней и десять взаимодополняющих цивилизационных констант.
+2. **Generative Psychometrics for Values** задаёт разбор свободного текста на ценностно значимые восприятия и утверждения.
+3. **CLAVE** задаёт калибровку оценщика под выбранные определения на небольшом экспертном корпусе.
+4. **AdAEM** задаёт автоматическое расширение диагностических вопросов; в PENTA-AI его цель дополнена абсолютным соответствием нормативному конструкту.
+
+**№ 809 — Указ Президента РФ, а не федеральный закон.** Он используется как дополнительный нормативный источник и не заменяет Пентабазис. Интерпретационная карта хранится отдельно в [`data/ukaz-809-crosswalk.yaml`](data/ukaz-809-crosswalk.yaml), а официальные документы — в [`data/sources.yaml`](data/sources.yaml).
+
+Первичные источники и близкие методы собраны в [`references/README.md`](references/README.md).
+
+## Научная проверка
+
+Измеритель проходит четыре независимые проверки:
+
+```mermaid
+flowchart LR
+    C[Содержание<br/>экспертная проверка] --> A[Разметка<br/>согласие экспертов]
+    A --> S[Оценщик<br/>точность и калибровка]
+    S --> R[Результат<br/>устойчивость профиля]
+```
+
+- **валидность содержания:** определения, границы и сценарии действительно относятся к заявленной константе;
+- **надёжность разметки:** независимые эксперты одинаково применяют кодировочную книгу;
+- **валидность оценщика:** автоматический результат воспроизводит замороженную экспертную разметку на новых сценариях и моделях;
+- **устойчивость:** профиль сохраняется при перефразировании, повторной генерации и смене тематического контекста.
+
+Критерии допуска результатов описаны в [`docs/validation.md`](docs/validation.md). До прохождения критериев сравнительные числа не интерпретируются как рейтинг моделей.
+
+## Структура репозитория
+
+```text
+PENTA-AI/
+├── assets/                         визуальная карта проекта
+├── data/
+│   ├── constructs.yaml             онтология PENTA-10
+│   ├── sources.yaml                реестр источников
+│   └── ukaz-809-crosswalk.yaml     нормативная карта № 809 ↔ PENTA-10
+├── docs/
+│   ├── measurement-contract.md     предмет и границы измерения
+│   ├── annotation-guide.md         правила доказательной разметки
+│   ├── scientific-method.md        экспериментальная спецификация v0.1
+│   └── validation.md               критерии научной состоятельности
+├── examples/                       эталонные записи данных
+├── schemas/                        JSON Schema для всех объектов
+├── references/README.md            источники и методологические основания
+└── CITATION.cff                    метаданные цитирования
+```
+
+## Статус концепта
+
+Репозиторий фиксирует **концептуальную и измерительную спецификацию v0.1**. Численные профили моделей и эмпирический выпуск данных здесь пока не заявлены. Любой последующий результат должен сохранять версию конструкта, полный протокол, исходные ответы, доказательные фрагменты и оценку неопределённости.
+
+## Цитирование
+
+До выхода эмпирического выпуска используйте метаданные из [`CITATION.cff`](CITATION.cff) и указывайте версию конструкта `penta-ai-0.1`.

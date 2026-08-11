@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ikanam-ai/PENTA-AI/schemas/source-registry.schema.json",
+  "title": "Реестр источников PENTA-AI",
+  "type": "object",
+  "required": ["schema_version", "retrieved_at", "sources"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "retrieved_at": {"type": "string", "format": "date"},
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "role", "year", "url"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "role": {
+            "enum": [
+              "construct_foundation", "construct_definition", "construct_clarification",
+              "normative_sidecar", "normative_amendment", "measurement_method",
+              "scorer_method", "adaptive_item_method"
+            ]
+          },
+          "year": {"type": "integer", "minimum": 1900},
+          "title_ru": {"type": "string"},
+          "title_en": {"type": "string"},
+          "authors": {"type": "array", "items": {"type": "string"}},
+          "doi": {"type": "string"},
+          "url": {"type": "string", "format": "uri"},
+          "supports": {"type": "array", "items": {"type": "string"}},
+          "limitations": {"type": "array", "items": {"type": "string"}},
+          "amends": {"type": "string"}
+        }
+      }
+    }
+  }
+}
