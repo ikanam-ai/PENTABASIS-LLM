@@ -57,13 +57,15 @@
     </g>
   </g>
 
-  <g transform="translate(635 92)" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
-    <text fill="#f8fafc" font-size="56" font-weight="800" letter-spacing="-2">PENTABASIS-LLM</text>
-    <rect y="90" width="455" height="5" rx="2.5" fill="url(#accent)"/>
-    <text y="135" fill="#bfdbfe" font-size="24" font-weight="600">Пентабазис как измеримый</text>
-    <text y="167" fill="#bfdbfe" font-size="24" font-weight="600">нормативный профиль ИИ</text>
+  <g transform="translate(618 70)" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text y="4" fill="#93c5fd" font-size="12" font-weight="700" letter-spacing="2.1">ИЗМЕРЕНИЕ ЦЕННОСТНОГО СООТВЕТСТВИЯ</text>
+    <text y="69" fill="#f8fafc" font-size="54" font-weight="800" letter-spacing="-1.4"
+          textLength="520" lengthAdjust="spacingAndGlyphs">PENTABASIS-LLM</text>
+    <rect y="91" width="520" height="5" rx="2.5" fill="url(#accent)"/>
+    <text y="137" fill="#bfdbfe" font-size="23" font-weight="600">Пентабазис как измеримый профиль</text>
+    <text y="169" fill="#bfdbfe" font-size="23" font-weight="600">ответов языковых моделей</text>
 
-    <g transform="translate(0 215)">
+    <g transform="translate(0 219)">
       <g>
         <circle cx="8" cy="3" r="6" fill="#38bdf8"/>
         <text x="28" y="10" fill="#e0f2fe" font-size="19" font-weight="650">Созидание · Развитие</text>
@@ -86,10 +88,11 @@
       </g>
     </g>
 
-    <g transform="translate(0 488)">
-      <rect width="452" height="58" rx="14" fill="#0f172a" fill-opacity=".52" stroke="#60a5fa" stroke-opacity=".32"/>
-      <text x="22" y="24" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="1.5">НАУЧНЫЙ КОНЦЕПТ</text>
-      <text x="22" y="44" fill="#f8fafc" font-size="15" font-weight="600">Свободные ответы · доказательные фрагменты · калибровка</text>
+    <g transform="translate(0 470)">
+      <rect width="520" height="76" rx="14" fill="#0f172a" fill-opacity=".52" stroke="#60a5fa" stroke-opacity=".32"/>
+      <text x="22" y="23" fill="#94a3b8" font-size="11" font-weight="700" letter-spacing="1.5">НАУЧНЫЙ КОНЦЕПТ · 10 КОНСТАНТ</text>
+      <text x="22" y="47" fill="#f8fafc" font-size="14" font-weight="600">Свободные ответы · доказательные фрагменты</text>
+      <text x="22" y="66" fill="#cbd5e1" font-size="13" font-weight="600">Калибровка · воспроизводимый протокол</text>
     </g>
   </g>
 </svg>
